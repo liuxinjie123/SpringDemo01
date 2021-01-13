@@ -8,7 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class FirstTest {
     @Test
-    public void testl() {
+    public void test() {
         // 定义Spring配置文件的路径
         String xmlPath = "applicationContext.xml";
         // 初始化Spring容器，加载配置文件
@@ -39,15 +39,38 @@ public class FirstTest {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext(xmlPath);
         // 通过容器获取id为 person 的实例
         System.out.println(applicationContext.getBean("person"));
+        System.out.println(applicationContext.getBean("person"));
     }
 
     @Test
     public void test4() {
         // 定义Spring配置文件的路径
-        String xmlPath = "com/demo/static_factory/applicationContext.xml";
+        String xmlPath = "applicationContext.xml";
         // 初始化Spring容器，加载配置文件
         ApplicationContext context = new ClassPathXmlApplicationContext(xmlPath);
         // 通过容器获取id为 person 的实例
         System.out.println(context.getBean("person2"));
     }
+
+    @Test
+    public void test5() {
+        // 定义Spring配置文件的路径
+        String xmlPath = "applicationContext.xml";
+        // 初始化Spring容器，加载配置文件
+        ApplicationContext context = new ClassPathXmlApplicationContext(xmlPath);
+        // 通过容器获取id为 person 的实例
+        System.out.println(context.getBean("person3"));
+    }
+
+    @Test
+    public void test6() {
+        // 定义Spring配置文件的路径
+        String xmlPath = "applicationContext.xml";
+        // 初始化Spring容器，加载配置文件
+        ApplicationContext context = new ClassPathXmlApplicationContext(xmlPath);
+        // 通过容器获取id为 person 的实例
+        System.out.println(context.getBean("person11"));
+        System.out.println(context.getBean("person22"));
+    }
+
 }
